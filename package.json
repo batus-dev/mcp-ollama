@@ -1,0 +1,23 @@
+{
+  "name": "ollama-mcp-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "build": "tsc",
+    "inspector": "npx @modelcontextprotocol/inspector node dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.18.2",
+    "@types/node": "^24.5.2",
+    "axios": "^1.12.2",
+    "typescript": "^5.9.2"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/inspector": "^0.16.8"
+  }
+}
