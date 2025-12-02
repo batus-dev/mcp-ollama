@@ -4,10 +4,14 @@
   "main": "index.js",
   "scripts": {
     "clean": "rimraf dist",
-    "start": "node dist/index.js",
     "build": "npm run clean && tsc",
+    "start": "node dist/index.js",
+    "start:stdio": "node dist/index.js",
+    "start:http": "node dist/http-server.js",
     "inspector": "npx @modelcontextprotocol/inspector node dist/index.js",
-    "dev": "npm run build && npm run inspector"
+    "inspector:http": "npx @modelcontextprotocol/inspector",
+    "dev": "npm run build && npm run inspector",
+    "dev:http": "npm run build && npm run start:http"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +21,7 @@
     "@modelcontextprotocol/sdk": "^1.18.2",
     "@types/node": "^24.5.2",
     "axios": "^1.12.2",
+    "fastify": "^5.3.3",
     "typescript": "^5.9.2"
   },
   "devDependencies": {
